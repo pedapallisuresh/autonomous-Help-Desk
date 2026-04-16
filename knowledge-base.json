@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Password Reset Procedure (IAM)",
+      "content": "Users can self-service via portal. Admins use IAM agent for bulk. Keywords: password, login, access.",
+      "domain": "iam"
+    },
+    {
+      "id": 2,
+      "title": "Jamf Software Provisioning (Software)",
+      "content": "Access Self-Service app. Catalog auto-updates.",
+      "domain": "software"
+    },
+    {
+      "id": 3,
+      "title": "MFA Troubleshooting (IAM)",
+      "content": "Rescan QR or use backup codes.",
+      "domain": "iam"
+    },
+    {
+      "id": 4,
+      "title": "VPN Connection Issues (Network)",
+      "content": "Check certs, restart client.",
+      "domain": "network"
+    },
+    {
+      "id": 5,
+      "title": "Hardware Troubleshooting",
+      "content": "Check connections, update drivers, run diagnostics.",
+      "domain": "hardware"
+    },
+    {
+      "id": 6,
+      "title": "New Equipment Provisioning (Lifecycle)",
+      "content": "Submit request via Lifecycle tab.",
+      "domain": "lifecycle"
+    }
+  ]
+}

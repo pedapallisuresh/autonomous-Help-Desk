@@ -1,0 +1,55 @@
+{
+  "domains": {
+    "iam": [
+      {
+        "name": "John Doe",
+        "email": "john.doe@company.com",
+        "expertise": "Identity & Access Management Specialist",
+        "priority": "High"
+      }
+    ],
+    "network": [
+      {
+        "name": "Jane Smith",
+        "email": "jane.smith@company.com",
+        "expertise": "Network & Connectivity Engineer"
+      }
+    ],
+    "hardware": [
+      {
+        "name": "Mike Johnson",
+        "email": "mike.johnson@company.com",
+        "expertise": "Hardware & Device Support Technician"
+      }
+    ],
+    "software": [
+      {
+        "name": "Sarah Lee",
+        "email": "sarah.lee@company.com",
+        "expertise": "Software & Application Specialist"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "Alex Chen",
+        "email": "alex.chen@company.com",
+        "expertise": "Asset & Lifecycle Manager"
+      }
+    ],
+    "governance": [
+      {
+        "name": "David Kim",
+        "email": "david.kim@company.com",
+        "expertise": "Compliance & Governance Officer"
+      }
+    ],
+    "unknown": [
+      {
+        "name": "General Support Team",
+        "email": "support@company.com",
+        "expertise": "Catch-all Escalation"
+      }
+    ]
+  }
+}
+

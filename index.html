@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Help Desk - AI Powered IT Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>Autonomous Help Desk</h1>
+            </div>
+            <p>AI-Powered IT Service Management</p>
+        </header>
+
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-tab="iam"><i class="fas fa-user-shield"></i> IAM</button>
+                <button class="nav-btn" data-tab="triage"><i class="fas fa-stethoscope"></i> Triage</button>
+                <button class="nav-btn" data-tab="lifecycle"><i class="fas fa-laptop-code"></i> Lifecycle</button>
+                <button class="nav-btn" data-tab="knowledge"><i class="fas fa-book"></i> Knowledge</button>
+                <button class="nav-btn" data-tab="governance"><i class="fas fa-chart-line"></i> Governance</button>
+            </nav>
+        </aside>
+
+        <main class="tab-content">
+            <!-- IAM Tab -->
+            <section id="iam" class="tab-panel active">
+                <h2>Identity & Access Management</h2>
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" id="iam-username" placeholder="user@company.com">
+                </div>
+                <button onclick="activateAgent('iam', 'reset-password')">Reset Password</button>
+                <button onclick="activateAgent('iam', 'mfa-reset')">MFA Reset</button>
+                <button onclick="activateAgent('iam', 'provision-access')">Provision Access</button>
+                <div id="iam-response"></div>
+            </section>
+
+            <!-- Triage Tab -->
+            <section id="triage" class="tab-panel">
+                <h2>Intelligent Triage & Resolution</h2>
+                <div class="chat-container">
+                    <div id="triage-chat" class="chat"></div>
+                    <div id="classification-display" class="classification-section" style="display: none;">
+                        <h4>Latest Classification:</h4>
+                        <div id="domain-badge"></div>
+                        <div id="assignee-info"></div>
+                    </div>
+                    <input type="text" id="triage-input" placeholder="Describe your issue...">
+                    <button onclick="sendTriageMessage()">Send</button>
+                </div>
+                <div id="triage-sentiment"></div>
+            </section>
+
+            <!-- Lifecycle Tab -->
+            <section id="lifecycle" class="tab-panel">
+                <h2>Lifecycle & Asset Management</h2>
+                <button onclick="activateAgent('lifecycle', 'provision-software')">Provision Software (Jamf)</button>
+                <button onclick="activateAgent('lifecycle', 'new-equipment')">New Equipment Request</button>
+                <ul id="inventory-list"></ul>
+            </section>
+
+            <!-- Knowledge Tab -->
+            <section id="knowledge" class="tab-panel">
+                <h2>Knowledge & Self-Service</h2>
+                <input type="text" id="query-input" placeholder="Ask about anything...">
+                <button onclick="queryKnowledge()">Search Knowledge</button>
+                <div id="knowledge-response"></div>
+            </section>
+
+            <!-- Governance Tab -->
+            <section id="governance" class="tab-panel">
+                <h2>Governance & Operations</h2>
+                <div id="sla-metrics"></div>
+                <button onclick="runQualityAssurance()">Run QA Check</button>
+                <div id="qa-results"></div>
+            </section>
+        </main>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="agents.js"></script>
+</body>
+</html>
